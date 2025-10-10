@@ -48,8 +48,8 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
+      title: "¡Mensaje Enviado!",
+      description: "Nos pondremos en contacto contigo en 24 horas.",
     });
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
@@ -57,18 +57,18 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: <Phone size={24} weight="light" />,
-      label: "Phone",
+      label: "Teléfono",
       value: "(555) 123-4567",
     },
     {
       icon: <Envelope size={24} weight="light" />,
       label: "Email",
-      value: "contact@creditrepair.com",
+      value: "info@adacoys.com",
     },
     {
       icon: <MapPin size={24} weight="light" />,
-      label: "Location",
-      value: "New York, NY 10001",
+      label: "Ubicación",
+      value: "Miami, FL, USA",
     },
   ];
 
@@ -82,15 +82,15 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16 md:mb-20">
           <div className="inline-block mb-4">
-            <span className="text-sm text-primary tracking-wider uppercase">Get In Touch</span>
+            <span className="text-sm text-primary tracking-wider uppercase">Contáctanos</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white/90">Start Your</span>
+            <span className="text-white/90">Comienza Tu</span>
             <br />
-            <span className="gradient-text-indigo">Credit Journey</span>
+            <span className="gradient-text-indigo">Camino Crediticio</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-            Ready to take control of your credit? Let's discuss how we can help you achieve your financial goals.
+            ¿Listo para tomar control de tu crédito? Hablemos sobre cómo podemos ayudarte a alcanzar tus metas financieras.
           </p>
         </div>
 
@@ -119,7 +119,7 @@ const ContactSection = () => {
               <div className="form-element">
                 <Input
                   type="text"
-                  placeholder="Your Name"
+                  placeholder="Tu Nombre"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
@@ -130,7 +130,7 @@ const ContactSection = () => {
               <div className="form-element">
                 <Input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder="Tu Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
@@ -141,7 +141,7 @@ const ContactSection = () => {
               <div className="form-element">
                 <Input
                   type="tel"
-                  placeholder="Your Phone"
+                  placeholder="Tu Teléfono"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="bg-white/[0.03] border-white/[0.1] focus:border-primary text-white placeholder:text-white/30 rounded-xl h-12"
@@ -150,7 +150,7 @@ const ContactSection = () => {
 
               <div className="form-element">
                 <Textarea
-                  placeholder="Tell us about your credit situation..."
+                  placeholder="Cuéntanos sobre tu situación crediticia..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
@@ -166,7 +166,7 @@ const ContactSection = () => {
                   className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-0 shadow-xl glow-indigo rounded-xl transition-all duration-300 hover:scale-105 h-12"
                 >
                   <PaperPlaneTilt size={20} weight="fill" className="mr-2" />
-                  Send Message
+                  Enviar Mensaje
                 </Button>
               </div>
             </form>

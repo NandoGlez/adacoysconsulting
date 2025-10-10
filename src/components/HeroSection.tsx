@@ -138,7 +138,7 @@ const HeroSection = () => {
           >
             <Circle className="h-2 w-2 fill-rose-500/80 text-rose-500/80" />
             <span className="text-sm text-white/60 tracking-wide">
-              Your Financial Partner
+              Tu Socio Financiero
             </span>
           </motion.div>
 
@@ -149,11 +149,11 @@ const HeroSection = () => {
           >
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
-                Open Doors With a
+                Abre Puertas Con un
               </span>
               <br />
               <span className="gradient-text-indigo">
-                Better Score
+                Mejor Puntaje
               </span>
             </h1>
           </motion.div>
@@ -164,7 +164,7 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.9 }}
           >
             <p className="text-base sm:text-lg md:text-xl text-white/40 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              From lower interest rates to getting approved, good credit is power. We help you build it.
+              Desde tasas de interés más bajas hasta aprobaciones, el buen crédito es poder. Te ayudamos a construirlo.
             </p>
           </motion.div>
 
@@ -177,15 +177,17 @@ const HeroSection = () => {
             <Button 
               size="lg"
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-0 shadow-xl glow-indigo px-8 py-6 text-lg rounded-xl transition-all duration-300 hover:scale-105"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Start Your Journey
+              Comienza Tu Camino
             </Button>
             <Button 
               size="lg"
               variant="outline"
               className="glass-card text-white/80 hover:text-white hover:bg-white/[0.05] px-8 py-6 text-lg rounded-xl transition-all duration-300"
+              onClick={() => window.location.href = '/calculadora'}
             >
-              Learn More
+              Calculadora de Costos
             </Button>
           </motion.div>
         </div>

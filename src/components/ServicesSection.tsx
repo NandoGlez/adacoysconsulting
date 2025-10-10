@@ -43,43 +43,43 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <FileText size={40} weight="light" />,
-      title: "Credit Report Analysis",
-      description: "Comprehensive review of all three credit bureaus to identify errors, inaccuracies, and improvement opportunities.",
+      title: "Análisis de Reporte Crediticio",
+      description: "Revisión integral de las tres agencias de crédito para identificar errores, inexactitudes y oportunidades de mejora.",
       gradient: "from-indigo-500/20 to-purple-600/20",
       glow: "glow-indigo",
     },
     {
       icon: <ChartLineUp size={40} weight="light" />,
-      title: "Dispute Management",
-      description: "Strategic dispute process to challenge negative items and remove inaccuracies from your credit reports.",
+      title: "Gestión de Disputas",
+      description: "Proceso estratégico de disputas para desafiar items negativos y eliminar inexactitudes de tus reportes de crédito.",
       gradient: "from-rose-500/20 to-pink-600/20",
       glow: "glow-rose",
     },
     {
       icon: <CreditCard size={40} weight="light" />,
-      title: "Credit Building",
-      description: "Personalized strategies to establish positive credit history and improve your overall credit profile.",
+      title: "Construcción de Crédito",
+      description: "Estrategias personalizadas para establecer un historial crediticio positivo y mejorar tu perfil crediticio general.",
       gradient: "from-violet-500/20 to-fuchsia-600/20",
       glow: "glow-violet",
     },
     {
       icon: <UserCircle size={40} weight="light" />,
-      title: "Identity Monitoring",
-      description: "24/7 monitoring to protect against identity theft and unauthorized activity on your credit profile.",
+      title: "Monitoreo de Identidad",
+      description: "Monitoreo 24/7 para proteger contra robo de identidad y actividad no autorizada en tu perfil crediticio.",
       gradient: "from-cyan-500/20 to-blue-600/20",
       glow: "glow-indigo",
     },
     {
       icon: <ListChecks size={40} weight="light" />,
-      title: "Credit Coaching",
-      description: "One-on-one guidance to develop healthy financial habits and maintain excellent credit long-term.",
+      title: "Asesoría de Crédito",
+      description: "Orientación personalizada para desarrollar hábitos financieros saludables y mantener un excelente crédito a largo plazo.",
       gradient: "from-amber-500/20 to-orange-600/20",
       glow: "glow-rose",
     },
     {
       icon: <Handshake size={40} weight="light" />,
-      title: "Creditor Negotiations",
-      description: "Expert negotiation with creditors and collection agencies to settle debts and remove negative marks.",
+      title: "Negociaciones con Acreedores",
+      description: "Negociación experta con acreedores y agencias de cobranza para liquidar deudas y eliminar marcas negativas.",
       gradient: "from-emerald-500/20 to-teal-600/20",
       glow: "glow-violet",
     },
@@ -95,15 +95,15 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16 md:mb-20">
           <div className="inline-block mb-4">
-            <span className="text-sm text-secondary tracking-wider uppercase">Our Services</span>
+            <span className="text-sm text-secondary tracking-wider uppercase">Nuestros Servicios</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white/90">Complete Credit</span>
+            <span className="text-white/90">Soluciones de Crédito</span>
             <br />
-            <span className="gradient-text-rose">Solutions</span>
+            <span className="gradient-text-rose">Completas</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-            From analysis to execution, we provide comprehensive credit repair services tailored to your unique situation.
+            Desde el análisis hasta la ejecución, brindamos servicios integrales de reparación de crédito adaptados a tu situación única.
           </p>
         </div>
 

@@ -49,11 +49,12 @@ const Footer = () => {
   ];
 
   const navLinks = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Services", href: "#" },
-    { label: "Testimonials", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Inicio", href: "#" },
+    { label: "Nosotros", href: "#" },
+    { label: "Servicios", href: "#" },
+    { label: "Testimonios", href: "#" },
+    { label: "Contacto", href: "#" },
+    { label: "Calculadora", href: "/calculadora" },
   ];
 
   return (
@@ -71,8 +72,8 @@ const Footer = () => {
       <div ref={footerRef} className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold gradient-text-indigo mb-2">Credit Repair</h3>
-            <p className="text-white/40 text-sm">Building Better Credit, Building Better Futures</p>
+            <h3 className="text-2xl font-bold gradient-text-indigo mb-2">Adacoys Consulting</h3>
+            <p className="text-white/40 text-sm">Construyendo Mejor Crédito, Construyendo Mejores Futuros</p>
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6">
@@ -101,7 +102,7 @@ const Footer = () => {
 
           <div className="text-center pt-8 border-t border-white/[0.05] w-full">
             <p className="text-white/40 text-sm">
-              © {new Date().getFullYear()} Credit Repair. All rights reserved.
+              © {new Date().getFullYear()} Adacoys Consulting. Todos los derechos reservados.
             </p>
           </div>
         </div>

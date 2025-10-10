@@ -35,25 +35,25 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      name: "Sarah Mitchell",
-      role: "Small Business Owner",
-      content: "I was denied for a business loan due to my credit. After 4 months with this team, my score jumped 127 points and I got approved! They changed my life.",
+      name: "María González",
+      role: "Propietaria de Negocio",
+      content: "Me negaron un préstamo comercial debido a mi crédito. Después de 4 meses con este equipo, mi puntaje aumentó 127 puntos y me aprobaron. Cambiaron mi vida.",
       rating: 5,
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Maria",
     },
     {
-      name: "Marcus Johnson",
-      role: "Recent Graduate",
-      content: "As a young professional, I had no idea how to build credit. Their coaching was invaluable—I went from 580 to 720 in just 6 months.",
+      name: "Carlos Ramírez",
+      role: "Profesional de TI",
+      content: "Como joven profesional, no tenía idea de cómo construir crédito. Su asesoramiento fue invaluable: pasé de 580 a 720 en solo 6 meses.",
       rating: 5,
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos",
     },
     {
-      name: "Jennifer Lee",
-      role: "Healthcare Professional",
-      content: "Medical bills destroyed my credit. I thought I'd never recover, but they disputed every inaccuracy and helped me rebuild. Forever grateful!",
+      name: "Ana Martínez",
+      role: "Profesional de Salud",
+      content: "Las facturas médicas destruyeron mi crédito. Pensé que nunca me recuperaría, pero disputaron cada inexactitud y me ayudaron a reconstruir. ¡Eternamente agradecida!",
       rating: 5,
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jennifer",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana",
     },
   ];
 
@@ -67,15 +67,15 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16 md:mb-20">
           <div className="inline-block mb-4">
-            <span className="text-sm text-accent tracking-wider uppercase">Testimonials</span>
+            <span className="text-sm text-accent tracking-wider uppercase">Testimonios</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white/90">Real Stories,</span>
+            <span className="text-white/90">Historias Reales,</span>
             <br />
-            <span className="gradient-text-indigo">Real Results</span>
+            <span className="gradient-text-indigo">Resultados Reales</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-            Don't just take our word for it—hear from clients who've transformed their financial futures.
+            No solo confíes en nuestra palabra: escucha a los clientes que han transformado sus futuros financieros.
           </p>
         </div>
 

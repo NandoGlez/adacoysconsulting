@@ -55,23 +55,23 @@ const AboutSection = () => {
   const features = [
     {
       icon: <ShieldCheck size={32} weight="light" />,
-      title: "Proven Protection",
-      description: "We leverage federal consumer protection laws to dispute inaccuracies.",
+      title: "Protección Comprobada",
+      description: "Utilizamos las leyes federales de protección al consumidor para disputar inexactitudes.",
     },
     {
       icon: <TrendUp size={32} weight="light" />,
-      title: "Score Improvement",
-      description: "Average clients see 100+ point increases within 90 days.",
+      title: "Mejora de Puntaje",
+      description: "Los clientes promedio ven aumentos de más de 100 puntos en 90 días.",
     },
     {
       icon: <Users size={32} weight="light" />,
-      title: "Dedicated Support",
-      description: "Your personal credit specialist guides you every step.",
+      title: "Soporte Dedicado",
+      description: "Tu especialista de crédito personal te guía en cada paso.",
     },
     {
       icon: <Trophy size={32} weight="light" />,
-      title: "Certified Experts",
-      description: "Our team holds industry-leading certifications and credentials.",
+      title: "Expertos Certificados",
+      description: "Nuestro equipo posee certificaciones y credenciales líderes en la industria.",
     },
   ];
 
@@ -90,7 +90,7 @@ const AboutSection = () => {
               <div className="relative glass-card rounded-full p-8 flex items-center justify-center">
                 <div className="text-center space-y-6">
                   <div className="text-7xl font-bold gradient-text-indigo">850</div>
-                  <div className="text-white/60 text-lg tracking-wide">Your Dream Score</div>
+                  <div className="text-white/60 text-lg tracking-wide">Tu Puntaje Soñado</div>
                   <div className="flex justify-center gap-2 mt-4">
                     <div className="h-2 w-16 rounded-full bg-gradient-to-r from-red-500 to-yellow-500" />
                     <div className="h-2 w-16 rounded-full bg-gradient-to-r from-yellow-500 to-green-500" />
@@ -103,15 +103,15 @@ const AboutSection = () => {
           <div ref={contentRef} className="space-y-8">
             <div>
               <div className="inline-block mb-4">
-                <span className="text-sm text-primary tracking-wider uppercase">About Us</span>
+                <span className="text-sm text-primary tracking-wider uppercase">Sobre Nosotros</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="gradient-text-indigo">Transforming</span>
+                <span className="gradient-text-indigo">Transformando</span>
                 <br />
-                <span className="text-white/90">Credit Futures</span>
+                <span className="text-white/90">Futuros Crediticios</span>
               </h2>
               <p className="text-white/50 text-lg leading-relaxed">
-                We're not just fixing credit scores—we're empowering financial freedom. Our team of certified specialists has helped thousands rebuild their credit and unlock opportunities they never thought possible.
+                No solo arreglamos puntajes crediticios: empoderamos la libertad financiera. Nuestro equipo de especialistas certificados ha ayudado a miles a reconstruir su crédito y desbloquear oportunidades que nunca creyeron posibles.
               </p>
             </div>
 
