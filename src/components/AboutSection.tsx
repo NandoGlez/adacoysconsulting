@@ -88,12 +88,12 @@ const AboutSection = () => {
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-600/20 blur-3xl animate-glow-pulse" />
               <div className="relative glass-card rounded-full p-8 flex items-center justify-center">
-                <div className="text-center space-y-6">
-                  <div className="text-7xl font-bold gradient-text-blue">850</div>
-                  <div className="text-white/60 text-lg tracking-wide">Tu Puntaje Soñado</div>
+                  <div className="text-center space-y-4 sm:space-y-6">
+                  <div className="text-5xl sm:text-7xl font-bold gradient-text-blue">850</div>
+                  <div className="text-white/60 text-base sm:text-lg tracking-wide">Tu Puntaje Soñado</div>
                   <div className="flex justify-center gap-2 mt-4">
-                    <div className="h-2 w-16 rounded-full bg-gradient-to-r from-red-500 to-yellow-500" />
-                    <div className="h-2 w-16 rounded-full bg-gradient-to-r from-yellow-500 to-green-500" />
+                    <div className="h-2 w-12 sm:w-16 rounded-full bg-gradient-to-r from-red-500 to-yellow-500" />
+                    <div className="h-2 w-12 sm:w-16 rounded-full bg-gradient-to-r from-yellow-500 to-green-500" />
                   </div>
                 </div>
               </div>
@@ -105,12 +105,12 @@ const AboutSection = () => {
               <div className="inline-block mb-4">
                 <span className="text-sm text-primary tracking-wider uppercase">Sobre Nosotros</span>
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
                 <span className="gradient-text-blue">Transformando</span>
                 <br />
                 <span className="text-white/90">Futuros Crediticios</span>
               </h2>
-              <p className="text-white/50 text-lg leading-relaxed">
+              <p className="text-white/50 text-base md:text-lg leading-relaxed">
                 No solo arreglamos puntajes crediticios: empoderamos la libertad financiera. Nuestro equipo de especialistas certificados ha ayudado a miles a reconstruir su crédito y desbloquear oportunidades que nunca creyeron posibles.
               </p>
             </div>

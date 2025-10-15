@@ -84,12 +84,12 @@ const ContactSection = () => {
           <div className="inline-block mb-4">
             <span className="text-sm text-primary tracking-wider uppercase">Contáctanos</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="text-white/90">Comienza Tu</span>
             <br />
             <span className="gradient-text-blue">Camino Crediticio</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             ¿Listo para tomar control de tu crédito? Hablemos sobre cómo podemos ayudarte a alcanzar tus metas financieras.
           </p>
         </div>

@@ -100,12 +100,12 @@ const ServicesSection = () => {
           <div className="inline-block mb-4">
             <span className="text-sm text-secondary tracking-wider uppercase">Nuestros Servicios</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="text-white/90">Soluciones de Crédito</span>
             <br />
             <span className="gradient-text-rose">Completas</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Desde el análisis hasta la ejecución, brindamos servicios integrales de reparación de crédito adaptados a tu situación única.
           </p>
         </div>
@@ -116,17 +116,17 @@ const ServicesSection = () => {
             href={featuredService.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="block glass-card p-10 hover:bg-white/[0.08] transition-all duration-500 group relative overflow-hidden border-2 border-blue-500/30 hover:border-blue-500/50"
+            className="block glass-card p-6 sm:p-8 md:p-10 hover:bg-white/[0.08] transition-all duration-500 group relative overflow-hidden border-2 border-blue-500/30 hover:border-blue-500/50"
           >
             <div className={`absolute inset-0 bg-gradient-to-br ${featuredService.gradient} opacity-30 group-hover:opacity-50 transition-opacity duration-500`} />
             
             <div className="relative z-10 text-center">
-              <div className={`text-primary mb-6 group-hover:scale-110 transition-transform duration-300 ${featuredService.glow} inline-block`}>
+              <div className={`text-primary mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ${featuredService.glow} inline-block`}>
                 {featuredService.icon}
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{featuredService.title}</h3>
-              <p className="text-white/60 leading-relaxed text-lg mb-4">{featuredService.description}</p>
-              <span className="inline-block text-blue-400 group-hover:text-blue-300 font-medium">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">{featuredService.title}</h3>
+              <p className="text-white/60 leading-relaxed text-base md:text-lg mb-3 md:mb-4">{featuredService.description}</p>
+              <span className="inline-block text-blue-400 group-hover:text-blue-300 font-medium text-sm sm:text-base">
                 Verificar Ahora →
               </span>
             </div>
@@ -146,11 +146,11 @@ const ServicesSection = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
               
               <div className="relative z-10">
-                <div className={`text-primary mb-6 group-hover:scale-110 transition-transform duration-300 ${service.glow}`}>
+                <div className={`text-primary mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ${service.glow}`}>
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-white/40 leading-relaxed">{service.description}</p>
+                <h3 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4">{service.title}</h3>
+                <p className="text-white/40 leading-relaxed text-sm md:text-base">{service.description}</p>
               </div>
             </div>
           ))}
@@ -172,31 +172,31 @@ const ServicesSection = () => {
         </div>
 
         {/* Insurance Promotional Section */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="glass-card p-12 border-2 border-primary/30 hover:border-primary/50 transition-all duration-500 relative overflow-hidden group">
+        <div className="mt-16 md:mt-20 max-w-4xl mx-auto">
+          <div className="glass-card p-6 sm:p-8 md:p-12 border-2 border-primary/30 hover:border-primary/50 transition-all duration-500 relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-600/10 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             
             <div className="relative z-10 text-center">
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-3 md:mb-4">
                 <img 
                   src={logo} 
                   alt="Adacoys Consulting Logo" 
-                  className="h-12 md:h-14 w-auto object-contain"
+                  className="h-10 sm:h-12 md:h-14 w-auto object-contain"
                 />
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 md:mb-3">
                 Adacoys Credit Insurance
               </h3>
-              <p className="text-xl text-secondary mb-6">
+              <p className="text-lg sm:text-xl text-secondary mb-4 md:mb-6">
                 Tu "seguro" de reparación de crédito
               </p>
-              <p className="text-white/60 max-w-2xl mx-auto mb-8 leading-relaxed">
+              <p className="text-white/60 max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed text-sm sm:text-base">
                 Planes mensuales desde $25 que cubren la gestión de problemas comunes en tu historial de crédito. Disputamos errores, pedimos verificaciones y negociamos actualizaciones con acreedores cuando corresponde.
               </p>
               <a href="/seguro">
-                <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-md font-medium text-lg transition-all duration-300 hover:scale-105">
+                <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-medium text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto">
                   Conocer Planes
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </button>

@@ -55,12 +55,12 @@ export function AnimatedTestimonialsSection() {
           <div className="inline-block mb-4">
             <span className="text-sm text-accent tracking-wider uppercase">Resultados Reales</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="text-white/90">Nuestros Clientes,</span>
             <br />
             <span className="gradient-text-blue">Sus Éxitos</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-4">
             Casos reales de clientes que transformaron su crédito con nuestra ayuda.
           </p>
         </div>

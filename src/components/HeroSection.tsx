@@ -135,12 +135,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-6"
           >
             <img 
               src={logo} 
               alt="Adacoys Consulting Logo" 
-              className="h-24 md:h-32 w-auto object-contain mx-auto"
+              className="h-16 sm:h-20 md:h-28 w-auto object-contain mx-auto"
             />
           </motion.div>
 
@@ -148,10 +148,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 md:mb-12"
+            className="inline-flex items-center gap-2 px-3 py-2 rounded-full glass-card mb-6 md:mb-10"
           >
             <Circle className="h-2 w-2 fill-rose-500/80 text-rose-500/80" />
-            <span className="text-sm text-white/60 tracking-wide">
+            <span className="text-xs sm:text-sm text-white/60 tracking-wide">
               Tu Socio Financiero
             </span>
           </motion.div>
@@ -161,7 +161,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7 }}
           >
-            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 tracking-tight px-2">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
                 Abre Puertas Con un
               </span>
@@ -177,7 +177,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.9 }}
           >
-            <p className="text-base sm:text-lg md:text-xl text-white/40 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+            <p className="text-sm sm:text-base md:text-lg text-white/40 mb-8 md:mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
               Desde tasas de interés más bajas hasta aprobaciones, el buen crédito es poder. Te ayudamos a construirlo.
             </p>
           </motion.div>
@@ -190,7 +190,7 @@ const HeroSection = () => {
           >
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white border-0 shadow-xl glow-blue px-8 py-6 text-lg rounded-xl transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white border-0 shadow-xl glow-blue px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Comienza Tu Camino
@@ -198,7 +198,7 @@ const HeroSection = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="glass-card text-white/80 hover:text-white hover:bg-white/[0.05] px-8 py-6 text-lg rounded-xl transition-all duration-300"
+              className="glass-card text-white/80 hover:text-white hover:bg-white/[0.05] px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-xl transition-all duration-300 w-full sm:w-auto"
               onClick={() => window.location.href = '/calculadora'}
             >
               Calculadora de Costos

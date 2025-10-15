@@ -72,16 +72,16 @@ const Footer = () => {
       <div ref={footerRef} className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold gradient-text-blue mb-2">Adacoys Consulting</h3>
-            <p className="text-white/40 text-sm">Construyendo Mejor Crédito, Construyendo Mejores Futuros</p>
+            <h3 className="text-xl sm:text-2xl font-bold gradient-text-blue mb-2">Adacoys Consulting</h3>
+            <p className="text-white/40 text-xs sm:text-sm">Construyendo Mejor Crédito, Construyendo Mejores Futuros</p>
           </div>
 
-          <nav className="flex flex-wrap justify-center gap-6">
+          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {navLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
-                className="text-white/60 hover:text-white transition-colors duration-300 text-sm"
+                className="text-white/60 hover:text-white transition-colors duration-300 text-xs sm:text-sm"
               >
                 {link.label}
               </a>
