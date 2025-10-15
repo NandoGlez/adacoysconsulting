@@ -77,6 +77,7 @@ const AboutSection = () => {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="relative min-h-screen w-full flex items-center py-20 md:py-32 overflow-hidden bg-[#030303]"
     >
