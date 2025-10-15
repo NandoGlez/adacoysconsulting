@@ -169,6 +169,33 @@ const ServicesSection = () => {
             <span className="text-white font-medium text-lg">Contáctanos por WhatsApp</span>
           </a>
         </div>
+
+        {/* Insurance Promotional Section */}
+        <div className="mt-20 max-w-4xl mx-auto">
+          <div className="glass-card p-12 border-2 border-primary/30 hover:border-primary/50 transition-all duration-500 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-600/10 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+            
+            <div className="relative z-10 text-center">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                Adacoys Credit Insurance
+              </h3>
+              <p className="text-xl text-secondary mb-6">
+                Tu "seguro" de reparación de crédito
+              </p>
+              <p className="text-white/60 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Planes mensuales desde $25 que cubren la gestión de problemas comunes en tu historial de crédito. Disputamos errores, pedimos verificaciones y negociamos actualizaciones con acreedores cuando corresponde.
+              </p>
+              <a href="/seguro">
+                <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-md font-medium text-lg transition-all duration-300 hover:scale-105">
+                  Conocer Planes
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
