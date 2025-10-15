@@ -177,11 +177,11 @@ const ServicesSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-600/10 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             
             <div className="relative z-10 text-center">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-4">
                 <img 
                   src={logo} 
                   alt="Adacoys Consulting Logo" 
-                  className="h-24 md:h-28 w-auto object-contain"
+                  className="h-12 md:h-14 w-auto object-contain"
                 />
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">

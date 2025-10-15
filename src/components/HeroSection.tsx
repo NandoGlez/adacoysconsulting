@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/adacoys-logo.png";
 
 function CreditCard({
   className,
@@ -130,6 +131,19 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mb-6 md:mb-8"
+          >
+            <img 
+              src={logo} 
+              alt="Adacoys Consulting Logo" 
+              className="h-24 md:h-32 w-auto object-contain mx-auto"
+            />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
