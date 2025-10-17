@@ -173,7 +173,7 @@ const HeroSection = () => {
             <img 
               src={logo} 
               alt="Adacoys Consulting Logo" 
-              className="h-20 sm:h-24 md:h-36 w-auto object-contain mx-auto"
+              className="h-32 sm:h-36 md:h-48 w-auto object-contain mx-auto"
             />
           </motion.div>
 
