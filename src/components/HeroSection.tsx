@@ -3,6 +3,7 @@ import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/adacoys-logo.png";
+import skoolLogo from "@/assets/skool-logo.png";
 
 function CreditCard({
   className,
@@ -90,6 +91,23 @@ function CreditCard({
 const HeroSection = () => {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
+      {/* Skool Button - Top Right */}
+      <motion.a
+        href="https://www.skool.com/adacoys-academy-8263/about?ref=7d716a2ffab04479955389230d3bd923"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="absolute top-6 right-6 z-50 glass-card p-3 hover:bg-white/[0.08] transition-all duration-300 hover:scale-105"
+      >
+        <img 
+          src={skoolLogo} 
+          alt="Skool Community" 
+          className="h-8 w-auto object-contain"
+        />
+      </motion.a>
+
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.05] via-transparent to-cyan-500/[0.05] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">
@@ -140,7 +158,7 @@ const HeroSection = () => {
             <img 
               src={logo} 
               alt="Adacoys Consulting Logo" 
-              className="h-16 sm:h-20 md:h-28 w-auto object-contain mx-auto"
+              className="h-20 sm:h-24 md:h-36 w-auto object-contain mx-auto"
             />
           </motion.div>
 

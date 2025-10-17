@@ -72,20 +72,6 @@ const ServicesSection = () => {
       gradient: "from-violet-500/20 to-fuchsia-600/20",
       glow: "glow-sky",
     },
-    {
-      icon: <ListChecks size={40} weight="light" />,
-      title: "Asesoría de Crédito",
-      description: "Orientación personalizada para desarrollar hábitos financieros saludables y mantener un excelente crédito a largo plazo.",
-      gradient: "from-amber-500/20 to-orange-600/20",
-      glow: "glow-cyan",
-    },
-    {
-      icon: <Handshake size={40} weight="light" />,
-      title: "Negociaciones con Acreedores",
-      description: "Negociación experta con acreedores y agencias de cobranza para liquidar deudas y eliminar marcas negativas.",
-      gradient: "from-emerald-500/20 to-teal-600/20",
-      glow: "glow-sky",
-    },
   ];
 
   return (
