@@ -15,6 +15,7 @@ const Insurance = () => {
       price: 25,
       period: "6 meses de espera",
       description: "Plan básico para correcciones simples",
+      formUrl: "https://airtable.com/appqUbuEtEmTa7fKm/pageKyjkuFCrdMDgt/form",
       features: [
         "Inquiries no autorizadas",
         "Corrección de datos personales",
@@ -33,6 +34,7 @@ const Insurance = () => {
       price: 50,
       period: "6 meses de espera",
       description: "Plan intermedio con más cobertura",
+      formUrl: "https://airtable.com/appqUbuEtEmTa7fKm/pagTHQqfGVRM7atGi/form",
       features: [
         "Todo lo de Gold",
         "Colecciones hasta 2 cuentas",
@@ -52,6 +54,7 @@ const Insurance = () => {
       price: 70,
       period: "6 meses de espera",
       description: "Plan avanzado para casos complejos",
+      formUrl: "https://airtable.com/appqUbuEtEmTa7fKm/pagTHQqfGVRM7atGi/form",
       features: [
         "Todo lo de Platinum",
         "2 Charge-off adicionales (total 3)",
@@ -70,6 +73,7 @@ const Insurance = () => {
       price: 120,
       period: "Sin espera - Inicia desde la primera cuota",
       description: "Máxima cobertura para daño activo",
+      formUrl: "https://airtable.com/appqUbuEtEmTa7fKm/pagCld79Pdfrrgo9m/form",
       features: [
         "Todo sin límites",
         "Inquiries ilimitados",
@@ -314,13 +318,11 @@ const Insurance = () => {
                     </div>
                   )}
 
-                  <Button
-                    className="w-full mt-6"
-                    variant={selectedPlan === plan.id ? "default" : "outline"}
-                    onClick={() => setSelectedPlan(plan.id)}
-                  >
-                    {selectedPlan === plan.id ? "Plan Seleccionado" : "Seleccionar Plan"}
-                  </Button>
+                  <a href={plan.formUrl} target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full mt-6">
+                      Seleccionar Plan
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             ))}
