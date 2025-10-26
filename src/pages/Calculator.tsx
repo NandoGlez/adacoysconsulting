@@ -9,36 +9,36 @@ import { Link } from "react-router-dom";
 // Pricing data from CSV
 const PRICING_DATA = {
   negativeAccounts: [
-    { count: 1, total: 500 },
-    { count: 2, total: 700 },
-    { count: 3, total: 750 },
-    { count: 4, total: 800 },
-    { count: 5, total: 850 },
-    { count: 6, total: 750 },
-    { count: 7, total: 850 },
-    { count: 8, total: 1000 },
-    { count: 9, total: 950 },
-    { count: 10, total: 1000 },
-    { count: 11, total: 1100 },
-    { count: 12, total: 1200 },
-    { count: 13, total: 1300 },
-    { count: 14, total: 1400 },
-    { count: 15, total: 1500 },
-    { count: 16, total: 1600 },
-    { count: 17, total: 1700 },
-    { count: 18, total: 1800 },
-    { count: 19, total: 1900 },
-    { count: 20, total: 2000 },
-    { count: 21, total: 2100 },
-    { count: 22, total: 2200 },
-    { count: 23, total: 2300 },
-    { count: 24, total: 2400 },
-    { count: 25, total: 2500 },
-    { count: 26, total: 2600 },
-    { count: 27, total: 2700 },
-    { count: 28, total: 2800 },
-    { count: 29, total: 2900 },
-    { count: 30, total: 3000 },
+    { count: 1, total: 500, perUnit: 500 },
+    { count: 2, total: 700, perUnit: 350 },
+    { count: 3, total: 750, perUnit: 250 },
+    { count: 4, total: 800, perUnit: 200 },
+    { count: 5, total: 850, perUnit: 200 },
+    { count: 6, total: 750, perUnit: 125 },
+    { count: 7, total: 850, perUnit: 121.43 },
+    { count: 8, total: 1000, perUnit: 125 },
+    { count: 9, total: 950, perUnit: 105.56 },
+    { count: 10, total: 1000, perUnit: 100 },
+    { count: 11, total: 1100, perUnit: 100 },
+    { count: 12, total: 1200, perUnit: 100 },
+    { count: 13, total: 1300, perUnit: 100 },
+    { count: 14, total: 1400, perUnit: 100 },
+    { count: 15, total: 1500, perUnit: 100 },
+    { count: 16, total: 1600, perUnit: 100 },
+    { count: 17, total: 1700, perUnit: 100 },
+    { count: 18, total: 1800, perUnit: 100 },
+    { count: 19, total: 1900, perUnit: 100 },
+    { count: 20, total: 2000, perUnit: 100 },
+    { count: 21, total: 2100, perUnit: 100 },
+    { count: 22, total: 2200, perUnit: 100 },
+    { count: 23, total: 2300, perUnit: 100 },
+    { count: 24, total: 2400, perUnit: 100 },
+    { count: 25, total: 2500, perUnit: 100 },
+    { count: 26, total: 2600, perUnit: 100 },
+    { count: 27, total: 2700, perUnit: 100 },
+    { count: 28, total: 2800, perUnit: 100 },
+    { count: 29, total: 2900, perUnit: 100 },
+    { count: 30, total: 3000, perUnit: 100 },
   ],
   inquiries: {
     low: { min: 0, max: 15, cost: 200 },
@@ -238,7 +238,9 @@ const Calculator = () => {
                 {results.negativeCost > 0 && (
                   <>
                     {Array.from({ length: parseInt(negativeAccountsInput || "0") }).map((_, index) => {
-                      const costPerAccount = Math.round(results.negativeCost / parseInt(negativeAccountsInput || "1"));
+                      const negativeAccounts = parseInt(negativeAccountsInput || "0");
+                      const pricing = PRICING_DATA.negativeAccounts.find(p => p.count === negativeAccounts);
+                      const costPerAccount = pricing?.perUnit || 100;
                       return (
                         <div key={index} className="flex justify-between">
                           <span className="text-white/60">Cuenta negativa {index + 1}:</span>
