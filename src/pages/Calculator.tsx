@@ -236,10 +236,17 @@ const Calculator = () => {
               <div className="glass-card p-6 rounded-xl space-y-3">
                 <h3 className="font-bold text-lg mb-4">Desglose:</h3>
                 {results.negativeCost > 0 && (
-                  <div className="flex justify-between">
-                    <span className="text-white/60">Cuentas negativas:</span>
-                    <span className="text-white font-medium">${results.negativeCost.toLocaleString()}</span>
-                  </div>
+                  <>
+                    {Array.from({ length: parseInt(negativeAccountsInput || "0") }).map((_, index) => {
+                      const costPerAccount = Math.round(results.negativeCost / parseInt(negativeAccountsInput || "1"));
+                      return (
+                        <div key={index} className="flex justify-between">
+                          <span className="text-white/60">Cuenta negativa {index + 1}:</span>
+                          <span className="text-white font-medium">${costPerAccount.toLocaleString()}</span>
+                        </div>
+                      );
+                    })}
+                  </>
                 )}
                 {results.inquiriesCost > 0 && (
                   <div className="flex justify-between">
@@ -279,7 +286,7 @@ const Calculator = () => {
                     <div>
                       <p className="font-medium">Plan VIP: ${results.total.toLocaleString()} (pago completo)</p>
                       <p className="text-xs text-white/40 mt-1">
-                        Cambios estimados en 30-60 días.
+                        Cambios estimados en 30-90 días.
                       </p>
                     </div>
                   </div>
