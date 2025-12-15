@@ -47,7 +47,7 @@ const ServicesSection = () => {
     description: "Obtén acceso inmediato a tu puntaje de crédito y descubre cómo mejorar tu perfil financiero. Solo $1 USD.",
     gradient: "from-blue-500/30 to-cyan-600/30",
     glow: "glow-blue",
-    link: "https://myfreescorenow.com/enroll/?AID=ADACOYSCONSULTING&PID=36754",
+    link: "https://www.identityiq.com/creditpreferred.aspx?offercode=431296P4",
   };
 
   const services = [
