@@ -3,38 +3,55 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { Progress } from "@/components/ui/progress";
 import KpiCard from "@/components/admin/KpiCard";
 import { kpiSummary, mrrHistory, revenueSources, acquisitionChannels } from "@/data/mockAdminData";
+import { useLang } from "@/i18n/LanguageContext";
 
 const fmt = (n: number) => `$${n.toLocaleString()}`;
 
 const DashboardOverview = () => {
+  const { t, lang } = useLang();
   const mrrProgress = (kpiSummary.mrr / kpiSummary.goalMrr) * 100;
   const monthsToGoal = kpiSummary.mrrGrowth > 0
     ? Math.ceil(Math.log(kpiSummary.goalMrr / kpiSummary.mrr) / Math.log(1 + kpiSummary.mrrGrowth / 100))
     : Infinity;
 
+  const sourceNameMap: Record<string, string> = {
+    "IG Ads": t("source.igAds"),
+    "Organic Videos": t("source.organicVideos"),
+    "Referrals": t("source.referrals"),
+    "Direct": t("source.direct"),
+  };
+
+  const channelNameMap: Record<string, string> = {
+    "Instagram Ads": t("channel.instagramAds"),
+    "Organic Content": t("channel.organicContent"),
+    "Referrals": t("channel.referrals"),
+    "WhatsApp": t("channel.whatsapp"),
+  };
+
+  const translatedSources = revenueSources.map(s => ({ ...s, name: sourceNameMap[s.name] || s.name }));
+  const translatedChannels = acquisitionChannels.map(c => ({ ...c, channel: channelNameMap[c.channel] || c.channel }));
+
   return (
     <div className="space-y-6">
-      {/* KPI Cards */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <KpiCard title="Monthly Recurring Revenue" value={fmt(kpiSummary.mrr)} change={kpiSummary.mrrGrowth} icon={DollarSign} />
-        <KpiCard title="Active Clients" value={kpiSummary.totalClients.toString()} change={8.3} icon={Users} />
-        <KpiCard title="New Leads (This Month)" value={kpiSummary.newLeads.toString()} change={15.2} icon={UserPlus} />
-        <KpiCard title="Churn Rate" value={`${kpiSummary.churnRate}%`} change={-0.8} icon={TrendingDown} />
+        <KpiCard title={t("dashboard.mrr")} value={fmt(kpiSummary.mrr)} change={kpiSummary.mrrGrowth} icon={DollarSign} />
+        <KpiCard title={t("dashboard.activeClients")} value={kpiSummary.totalClients.toString()} change={8.3} icon={Users} />
+        <KpiCard title={t("dashboard.newLeads")} value={kpiSummary.newLeads.toString()} change={15.2} icon={UserPlus} />
+        <KpiCard title={t("dashboard.churnRate")} value={`${kpiSummary.churnRate}%`} change={-0.8} icon={TrendingDown} />
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <KpiCard title="Customer Acquisition Cost" value={fmt(kpiSummary.cac)} change={-5.1} icon={Target} />
-        <KpiCard title="Lifetime Value" value={fmt(kpiSummary.ltv)} change={7.4} icon={Heart} />
-        <KpiCard title="LTV:CAC Ratio" value={`${(kpiSummary.ltv / kpiSummary.cac).toFixed(1)}x`} icon={ArrowUpRight} subtitle="Target: 3x+" />
+        <KpiCard title={t("dashboard.cac")} value={fmt(kpiSummary.cac)} change={-5.1} icon={Target} />
+        <KpiCard title={t("dashboard.ltv")} value={fmt(kpiSummary.ltv)} change={7.4} icon={Heart} />
+        <KpiCard title={t("dashboard.ltvCacRatio")} value={`${(kpiSummary.ltv / kpiSummary.cac).toFixed(1)}x`} icon={ArrowUpRight} subtitle={`${t("common.target")}: 3x+`} />
       </div>
 
-      {/* Goal tracker */}
       <div className="glass-card p-6 space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Goal: $100K MRR</h3>
+            <h3 className="text-sm font-semibold text-foreground">{t("dashboard.goalMrr")}</h3>
             <p className="text-xs text-muted-foreground">
-              At current growth rate ({kpiSummary.mrrGrowth}%/mo), est. {monthsToGoal} months remaining
+              {t("dashboard.growthRate")} ({kpiSummary.mrrGrowth}%/{lang === "es" ? "mes" : "mo"}), est. {monthsToGoal} {t("dashboard.monthsRemaining")}
             </p>
           </div>
           <span className="text-lg font-bold text-primary">{mrrProgress.toFixed(1)}%</span>
@@ -46,46 +63,35 @@ const DashboardOverview = () => {
         </div>
       </div>
 
-      {/* Charts row */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        {/* MRR Growth */}
         <div className="glass-card p-6 space-y-4">
-          <h3 className="text-sm font-semibold text-foreground">MRR Growth Over Time</h3>
+          <h3 className="text-sm font-semibold text-foreground">{t("dashboard.mrrGrowth")}</h3>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={mrrHistory}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(0,0%,15%)" />
                 <XAxis dataKey="month" stroke="hsl(0,0%,40%)" fontSize={12} />
                 <YAxis stroke="hsl(0,0%,40%)" fontSize={12} tickFormatter={(v) => `$${v / 1000}k`} />
-                <Tooltip
-                  contentStyle={{ background: "hsl(0,0%,5%)", border: "1px solid hsl(0,0%,15%)", borderRadius: 8, fontSize: 12 }}
-                  formatter={(v: number) => [fmt(v), "MRR"]}
-                />
+                <Tooltip contentStyle={{ background: "hsl(0,0%,5%)", border: "1px solid hsl(0,0%,15%)", borderRadius: 8, fontSize: 12 }} formatter={(v: number) => [fmt(v), "MRR"]} />
                 <Line type="monotone" dataKey="mrr" stroke="hsl(213,57%,46%)" strokeWidth={2.5} dot={{ fill: "hsl(213,57%,46%)", r: 4 }} />
               </LineChart>
             </ResponsiveContainer>
           </div>
         </div>
 
-        {/* Revenue Sources Pie */}
         <div className="glass-card p-6 space-y-4">
-          <h3 className="text-sm font-semibold text-foreground">Revenue by Source</h3>
+          <h3 className="text-sm font-semibold text-foreground">{t("dashboard.revenueBySource")}</h3>
           <div className="h-64 flex items-center">
             <ResponsiveContainer width="50%" height="100%">
               <PieChart>
-                <Pie data={revenueSources} dataKey="value" cx="50%" cy="50%" outerRadius={80} strokeWidth={0}>
-                  {revenueSources.map((entry, i) => (
-                    <Cell key={i} fill={entry.color} />
-                  ))}
+                <Pie data={translatedSources} dataKey="value" cx="50%" cy="50%" outerRadius={80} strokeWidth={0}>
+                  {translatedSources.map((entry, i) => <Cell key={i} fill={entry.color} />)}
                 </Pie>
-                <Tooltip
-                  contentStyle={{ background: "hsl(0,0%,5%)", border: "1px solid hsl(0,0%,15%)", borderRadius: 8, fontSize: 12 }}
-                  formatter={(v: number) => [fmt(v)]}
-                />
+                <Tooltip contentStyle={{ background: "hsl(0,0%,5%)", border: "1px solid hsl(0,0%,15%)", borderRadius: 8, fontSize: 12 }} formatter={(v: number) => [fmt(v)]} />
               </PieChart>
             </ResponsiveContainer>
             <div className="space-y-2">
-              {revenueSources.map((s) => (
+              {translatedSources.map((s) => (
                 <div key={s.name} className="flex items-center gap-2 text-xs">
                   <div className="h-3 w-3 rounded-sm" style={{ background: s.color }} />
                   <span className="text-muted-foreground">{s.name}</span>
@@ -97,18 +103,17 @@ const DashboardOverview = () => {
         </div>
       </div>
 
-      {/* Acquisition channels */}
       <div className="glass-card p-6 space-y-4">
-        <h3 className="text-sm font-semibold text-foreground">Client Acquisition by Channel</h3>
+        <h3 className="text-sm font-semibold text-foreground">{t("dashboard.acquisitionByChannel")}</h3>
         <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={acquisitionChannels}>
+            <BarChart data={translatedChannels}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(0,0%,15%)" />
               <XAxis dataKey="channel" stroke="hsl(0,0%,40%)" fontSize={11} />
               <YAxis stroke="hsl(0,0%,40%)" fontSize={12} />
               <Tooltip contentStyle={{ background: "hsl(0,0%,5%)", border: "1px solid hsl(0,0%,15%)", borderRadius: 8, fontSize: 12 }} />
-              <Bar dataKey="leads" fill="hsl(213,57%,46%)" radius={[4, 4, 0, 0]} name="Leads" />
-              <Bar dataKey="clients" fill="hsl(193,70%,50%)" radius={[4, 4, 0, 0]} name="Clients" />
+              <Bar dataKey="leads" fill="hsl(213,57%,46%)" radius={[4, 4, 0, 0]} name={t("common.leads")} />
+              <Bar dataKey="clients" fill="hsl(193,70%,50%)" radius={[4, 4, 0, 0]} name={t("nav.clients")} />
             </BarChart>
           </ResponsiveContainer>
         </div>
