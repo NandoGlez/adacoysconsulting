@@ -51,10 +51,10 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
       <div className="relative z-10 w-full max-w-md px-8">
         <div ref={textRef} className="mb-12 text-center">
           <h1 className="text-5xl font-bold mb-4">
-            <span className="gradient-text-blue">Credit Repair</span>
+            <span className="gradient-text-blue">Consulting</span>
           </h1>
           <p className="text-white/40 text-sm tracking-wider">
-            Building Your Financial Future
+            Construyendo Tu Futuro Financiero
           </p>
         </div>
 
