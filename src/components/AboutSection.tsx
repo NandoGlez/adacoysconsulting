@@ -55,18 +55,18 @@ const AboutSection = () => {
   const features = [
     {
       icon: <ShieldCheck size={32} weight="light" />,
-      title: "Protección Comprobada",
-      description: "Utilizamos las leyes federales de protección al consumidor para disputar inexactitudes.",
+      title: "Estrategia Confiable",
+      description: "Aplicamos marcos probados para proteger y hacer crecer tu bienestar financiero.",
     },
     {
       icon: <TrendUp size={32} weight="light" />,
-      title: "Mejora de Puntaje",
-      description: "Los clientes promedio ven aumentos de más de 100 puntos en 90 días.",
+      title: "Resultados Medibles",
+      description: "Nuestros clientes avanzan hacia sus metas con planes claros y seguimiento constante.",
     },
     {
       icon: <Users size={32} weight="light" />,
       title: "Soporte Dedicado",
-      description: "Tu especialista de crédito personal te guía en cada paso.",
+      description: "Un consultor personal te acompaña en cada decisión importante.",
     },
     {
       icon: <Trophy size={32} weight="light" />,
@@ -90,11 +90,11 @@ const AboutSection = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-600/20 blur-3xl animate-glow-pulse" />
               <div className="relative glass-card rounded-full p-8 flex items-center justify-center">
                   <div className="text-center space-y-4 sm:space-y-6">
-                  <div className="text-5xl sm:text-7xl font-bold gradient-text-blue">850</div>
-                  <div className="text-white/60 text-base sm:text-lg tracking-wide">Tu Puntaje Soñado</div>
+                  <div className="text-5xl sm:text-7xl font-bold gradient-text-blue">+100%</div>
+                  <div className="text-white/60 text-base sm:text-lg tracking-wide">Claridad Financiera</div>
                   <div className="flex justify-center gap-2 mt-4">
-                    <div className="h-2 w-12 sm:w-16 rounded-full bg-gradient-to-r from-red-500 to-yellow-500" />
-                    <div className="h-2 w-12 sm:w-16 rounded-full bg-gradient-to-r from-yellow-500 to-green-500" />
+                    <div className="h-2 w-12 sm:w-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
+                    <div className="h-2 w-12 sm:w-16 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500" />
                   </div>
                 </div>
               </div>
@@ -109,10 +109,10 @@ const AboutSection = () => {
               <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
                 <span className="gradient-text-blue">Transformando</span>
                 <br />
-                <span className="text-white/90">Futuros Crediticios</span>
+                <span className="text-white/90">Futuros Financieros</span>
               </h2>
               <p className="text-white/50 text-base md:text-lg leading-relaxed">
-                No solo arreglamos puntajes crediticios: empoderamos la libertad financiera. Nuestro equipo de especialistas certificados ha ayudado a miles a reconstruir su crédito y desbloquear oportunidades que nunca creyeron posibles.
+                No solo asesoramos: empoderamos la libertad financiera. Nuestro equipo de consultores certificados ha ayudado a cientos de clientes a tomar mejores decisiones y desbloquear oportunidades que nunca creyeron posibles.
               </p>
             </div>
 

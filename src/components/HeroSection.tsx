@@ -198,11 +198,11 @@ const HeroSection = () => {
           >
             <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 tracking-tight px-2">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
-                Abre Puertas Con un
+                Estrategia Financiera Con
               </span>
               <br />
               <span className="gradient-text-blue">
-                Mejor Puntaje
+                Visión Real
               </span>
             </h1>
           </motion.div>
@@ -213,7 +213,7 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.9 }}
           >
             <p className="text-sm sm:text-base md:text-lg text-white/40 mb-8 md:mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              Desde tasas de interés más bajas hasta aprobaciones, el buen crédito es poder. Te ayudamos a construirlo.
+              Consultoría financiera personalizada para tomar mejores decisiones, planificar con claridad y desbloquear nuevas oportunidades.
             </p>
           </motion.div>
 
@@ -228,15 +228,15 @@ const HeroSection = () => {
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white border-0 shadow-xl glow-blue px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Comienza Tu Camino
+              Comienza Tu Consultoría
             </Button>
             <Button 
               size="lg"
               variant="outline"
               className="glass-card text-white/80 hover:text-white hover:bg-white/[0.05] px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-xl transition-all duration-300 w-full sm:w-auto"
-              onClick={() => window.location.href = '/calculadora'}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Calculadora de Costos
+              Habla Con Un Consultor
             </Button>
           </motion.div>
         </div>

@@ -72,7 +72,7 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-8">
           <div className="text-center">
             <h3 className="text-xl sm:text-2xl font-bold gradient-text-blue mb-2">Adacoys Consulting</h3>
-            <p className="text-white/40 text-xs sm:text-sm">Construyendo Mejor Crédito, Construyendo Mejores Futuros</p>
+            <p className="text-white/40 text-xs sm:text-sm">Consultoría Financiera Para Un Mejor Futuro</p>
           </div>
 
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-6">

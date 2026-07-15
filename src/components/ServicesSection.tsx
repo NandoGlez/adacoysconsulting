@@ -43,8 +43,8 @@ const ServicesSection = () => {
 
   const featuredService = {
     icon: <UserCircle size={48} weight="light" />,
-    title: "Chequea tu Puntaje de Crédito",
-    description: "Obtén acceso inmediato a tu puntaje de crédito y descubre cómo mejorar tu perfil financiero. Solo $1 USD.",
+    title: "Sesión de Diagnóstico Financiero",
+    description: "Obtén una revisión inicial de tu situación financiera y descubre oportunidades para avanzar. Solo $1 USD.",
     gradient: "from-blue-500/30 to-cyan-600/30",
     glow: "glow-blue",
     link: "https://www.identityiq.com/creditpreferred.aspx?offercode=431296P4",
@@ -53,22 +53,22 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <FileText size={40} weight="light" />,
-      title: "Análisis de Reporte Crediticio",
-      description: "Revisión integral de las tres agencias de crédito para identificar errores, inexactitudes y oportunidades de mejora.",
+      title: "Análisis Financiero Integral",
+      description: "Revisión completa de tu perfil financiero para identificar fortalezas, brechas y oportunidades reales.",
       gradient: "from-blue-500/20 to-cyan-600/20",
       glow: "glow-blue",
     },
     {
       icon: <ChartLineUp size={40} weight="light" />,
-      title: "Gestión de Disputas",
-      description: "Proceso estratégico de disputas para desafiar items negativos y eliminar inexactitudes de tus reportes de crédito.",
+      title: "Planificación Estratégica",
+      description: "Diseñamos un plan claro y accionable para alcanzar tus metas financieras a corto y largo plazo.",
       gradient: "from-rose-500/20 to-pink-600/20",
       glow: "glow-cyan",
     },
     {
       icon: <CreditCard size={40} weight="light" />,
-      title: "Construcción de Crédito",
-      description: "Estrategias personalizadas para establecer un historial crediticio positivo y mejorar tu perfil crediticio general.",
+      title: "Educación y Acompañamiento",
+      description: "Sesiones personalizadas para fortalecer tus hábitos financieros y tomar decisiones con confianza.",
       gradient: "from-violet-500/20 to-fuchsia-600/20",
       glow: "glow-sky",
     },
@@ -87,12 +87,12 @@ const ServicesSection = () => {
             <span className="text-sm text-secondary tracking-wider uppercase">Nuestros Servicios</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
-            <span className="text-white/90">Soluciones de Crédito</span>
+            <span className="text-white/90">Soluciones de Consultoría</span>
             <br />
-            <span className="gradient-text-rose">Completas</span>
+            <span className="gradient-text-rose">Personalizadas</span>
           </h2>
           <p className="text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Desde el análisis hasta la ejecución, brindamos servicios integrales de reparación de crédito adaptados a tu situación única.
+            Desde el diagnóstico hasta la ejecución, brindamos servicios integrales de consultoría financiera adaptados a tu situación única.
           </p>
         </div>
 
@@ -113,7 +113,7 @@ const ServicesSection = () => {
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">{featuredService.title}</h3>
               <p className="text-white/60 leading-relaxed text-base md:text-lg mb-3 md:mb-4">{featuredService.description}</p>
               <span className="inline-block text-blue-400 group-hover:text-blue-300 font-medium text-sm sm:text-base">
-                Verificar Ahora →
+                Agendar Ahora →
               </span>
             </div>
           </a>
@@ -174,10 +174,10 @@ const ServicesSection = () => {
                 Adacoys Credit Insurance
               </h3>
               <p className="text-lg sm:text-xl text-secondary mb-4 md:mb-6">
-                Tu "seguro" de reparación de crédito
+                Tu plan de acompañamiento financiero mensual
               </p>
               <p className="text-white/60 max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed text-sm sm:text-base">
-                Planes mensuales desde $25 que cubren la gestión de problemas comunes en tu historial de crédito. Disputamos errores, pedimos verificaciones y negociamos actualizaciones con acreedores cuando corresponde.
+                Planes mensuales desde $25 con acompañamiento continuo, revisiones periódicas y gestión de asuntos comunes de tu perfil financiero.
               </p>
               <a href="/seguro">
                 <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-medium text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto">
