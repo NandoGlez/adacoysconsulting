@@ -9,7 +9,6 @@ import {
   ListChecks, 
   Handshake 
 } from "@phosphor-icons/react";
-import logo from "@/assets/adacoys-logo.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
