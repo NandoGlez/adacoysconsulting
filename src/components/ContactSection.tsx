@@ -87,10 +87,10 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="text-white/90">Comienza Tu</span>
             <br />
-            <span className="gradient-text-blue">Camino Crediticio</span>
+            <span className="gradient-text-blue">Consultoría</span>
           </h2>
           <p className="text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            ¿Listo para tomar control de tu crédito? Hablemos sobre cómo podemos ayudarte a alcanzar tus metas financieras.
+            ¿Listo para tomar control de tu futuro financiero? Hablemos sobre cómo podemos ayudarte a alcanzar tus metas.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ const ContactSection = () => {
 
               <div className="form-element">
                 <Textarea
-                  placeholder="Cuéntanos sobre tu situación crediticia..."
+                  placeholder="Cuéntanos sobre tus metas financieras..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
