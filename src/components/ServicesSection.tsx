@@ -174,10 +174,10 @@ const ServicesSection = () => {
                 Adacoys Credit Insurance
               </h3>
               <p className="text-lg sm:text-xl text-secondary mb-4 md:mb-6">
-                Tu "seguro" de reparación de crédito
+                Tu plan de acompañamiento financiero mensual
               </p>
               <p className="text-white/60 max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed text-sm sm:text-base">
-                Planes mensuales desde $25 que cubren la gestión de problemas comunes en tu historial de crédito. Disputamos errores, pedimos verificaciones y negociamos actualizaciones con acreedores cuando corresponde.
+                Planes mensuales desde $25 con acompañamiento continuo, revisiones periódicas y gestión de asuntos comunes de tu perfil financiero.
               </p>
               <a href="/seguro">
                 <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-medium text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto">
