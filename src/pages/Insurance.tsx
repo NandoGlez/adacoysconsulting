@@ -154,9 +154,6 @@ const Insurance = () => {
               <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Inicio
               </Link>
-              <Link to="/calculadora" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Calculadora
-              </Link>
               <a href="https://wa.me/17028614457" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="gap-2">
                   <Phone className="h-4 w-4" />
