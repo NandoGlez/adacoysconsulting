@@ -53,7 +53,6 @@ const Footer = () => {
     { label: "Servicios", href: "#" },
     { label: "Testimonios", href: "#" },
     { label: "Contacto", href: "#" },
-    { label: "Calculadora", href: "/calculadora" },
   ];
 
   return (
