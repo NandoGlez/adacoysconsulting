@@ -24,13 +24,13 @@ function FloatingDataElement({
             className={cn(
               "w-48 h-32 md:w-52 md:h-36",
               "rounded-2xl",
-              "bg-white/[0.05] backdrop-blur-xl border border-white/[0.10]",
+              "bg-white/[0.08] backdrop-blur-xl border border-white/[0.15]",
               "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
               "p-4 flex items-center justify-center"
             )}
           >
             <svg
-              className="w-full h-full text-cyan-400/40"
+              className="w-full h-full text-cyan-400/60"
               viewBox="0 0 100 50"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
