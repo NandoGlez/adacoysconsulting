@@ -5,17 +5,125 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/adacoys-logo.png";
 import skoolLogo from "@/assets/skool-logo.png";
 
-function CreditCard({
+function FloatingDataElement({
   className,
   delay = 0,
   rotate = 0,
-  gradient = "from-blue-500/20 to-cyan-500/20",
+  type = "line-chart",
 }: {
   className?: string;
   delay?: number;
   rotate?: number;
-  gradient?: string;
+  type?: "line-chart" | "data-node" | "bar-chart" | "insight-glass" | "geo-accent";
 }) {
+  const renderContent = () => {
+    switch (type) {
+      case "line-chart":
+        return (
+          <div
+            className={cn(
+              "w-48 h-32 md:w-52 md:h-36",
+              "rounded-2xl",
+              "bg-white/[0.05] backdrop-blur-xl border border-white/[0.10]",
+              "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
+              "p-4 flex items-center justify-center"
+            )}
+          >
+            <svg
+              className="w-full h-full text-cyan-400/40"
+              viewBox="0 0 100 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 45Q15 40 25 30T45 25T70 10T100 5"
+                stroke="currentColor"
+                strokeWidth="2"
+                fill="none"
+              />
+              <circle cx="100" cy="5" r="2" fill="currentColor" />
+            </svg>
+          </div>
+        );
+
+      case "data-node":
+        return (
+          <div
+            className={cn(
+              "w-36 h-36 md:w-40 md:h-40",
+              "rounded-full",
+              "bg-white/[0.05] backdrop-blur-xl border border-white/[0.10]",
+              "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
+              "flex flex-col items-center justify-center p-4"
+            )}
+          >
+            <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center mb-2">
+              <div className="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+            </div>
+            <div className="h-1 w-12 bg-white/10 rounded-full" />
+            <div className="h-1 w-8 bg-white/10 rounded-full mt-1" />
+          </div>
+        );
+
+      case "bar-chart":
+        return (
+          <div
+            className={cn(
+              "w-40 h-48 md:w-44 md:h-52",
+              "rounded-2xl",
+              "bg-white/[0.05] backdrop-blur-xl border border-white/[0.10]",
+              "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
+              "flex items-end justify-around p-6"
+            )}
+          >
+            <div className="w-3 h-[40%] bg-blue-500/30 rounded-t-sm" />
+            <div className="w-3 h-[70%] bg-blue-500/50 rounded-t-sm" />
+            <div className="w-3 h-[55%] bg-cyan-500/30 rounded-t-sm" />
+            <div className="w-3 h-[90%] bg-cyan-400/60 rounded-t-sm shadow-[0_-5px_15px_rgba(34,211,238,0.2)]" />
+          </div>
+        );
+
+      case "insight-glass":
+        return (
+          <div
+            className={cn(
+              "w-56 h-32 md:w-60 md:h-36",
+              "rounded-2xl",
+              "bg-white/[0.05] backdrop-blur-xl border border-white/[0.10]",
+              "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
+              "p-5"
+            )}
+          >
+            <div className="flex justify-between items-center mb-4">
+              <div className="w-10 h-2 bg-white/20 rounded-full" />
+              <div className="w-4 h-4 rounded-full border border-cyan-400/50" />
+            </div>
+            <div className="space-y-2">
+              <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div className="w-[75%] h-full bg-blue-500/60" />
+              </div>
+              <div className="w-[60%] h-1.5 bg-white/5 rounded-full" />
+            </div>
+          </div>
+        );
+
+      case "geo-accent":
+        return (
+          <div
+            className={cn(
+              "w-24 h-24 md:w-28 md:h-28",
+              "rounded-xl",
+              "bg-white/[0.05] backdrop-blur-lg border border-white/[0.10]",
+              "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
+              "flex items-center justify-center"
+            )}
+          >
+            <div className="w-8 h-8 border-2 border-cyan-400/20 rounded-lg" />
+          </div>
+        );
+    }
+  };
+
   return (
     <motion.div
       initial={{
@@ -48,43 +156,11 @@ function CreditCard({
           repeat: Number.POSITIVE_INFINITY,
           ease: "easeInOut",
         }}
-        className="relative w-72 h-44 md:w-80 md:h-48"
         style={{
           perspective: "1000px",
         }}
       >
-        <div
-          className={cn(
-            "absolute inset-0 rounded-2xl",
-            "bg-gradient-to-br",
-            gradient,
-            "backdrop-blur-sm border border-white/[0.2]",
-            "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
-            "p-6 flex flex-col justify-between"
-          )}
-        >
-          <div className="w-12 h-10 rounded bg-gradient-to-br from-yellow-200/40 to-yellow-500/40 border border-yellow-600/30" />
-          
-          <div className="space-y-2">
-            <div className="flex gap-3 text-white/60 text-sm md:text-base font-mono">
-              <span>••••</span>
-              <span>••••</span>
-              <span>••••</span>
-              <span className="text-white/80">1234</span>
-            </div>
-            
-            <div className="flex justify-between items-end">
-              <div>
-                <div className="text-xs text-white/40 mb-1">Card Holder</div>
-                <div className="text-white/70 text-sm font-medium">JOHN DOE</div>
-              </div>
-              <div>
-                <div className="text-xs text-white/40 mb-1">Expires</div>
-                <div className="text-white/70 text-sm">12/25</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {renderContent()}
       </motion.div>
     </motion.div>
   );
@@ -128,38 +204,38 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.05] via-transparent to-cyan-500/[0.05] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">
-        <CreditCard
+        <FloatingDataElement
           delay={0.3}
           rotate={12}
-          gradient="from-blue-500/20 to-cyan-600/20"
+          type="line-chart"
           className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
         />
 
-        <CreditCard
+        <FloatingDataElement
           delay={0.5}
           rotate={-15}
-          gradient="from-rose-500/20 to-pink-600/20"
+          type="bar-chart"
           className="right-[-15%] md:right-[-10%] top-[60%] md:top-[65%]"
         />
 
-        <CreditCard
+        <FloatingDataElement
           delay={0.4}
           rotate={-8}
-          gradient="from-violet-500/20 to-fuchsia-600/20"
+          type="insight-glass"
           className="left-[0%] md:left-[5%] bottom-[5%] md:bottom-[10%]"
         />
 
-        <CreditCard
+        <FloatingDataElement
           delay={0.6}
           rotate={20}
-          gradient="from-amber-500/20 to-orange-600/20"
+          type="data-node"
           className="right-[10%] md:right-[15%] top-[10%] md:top-[15%]"
         />
 
-        <CreditCard
+        <FloatingDataElement
           delay={0.7}
           rotate={-25}
-          gradient="from-cyan-500/20 to-blue-600/20"
+          type="geo-accent"
           className="left-[15%] md:left-[20%] top-[5%] md:top-[10%]"
         />
       </div>
