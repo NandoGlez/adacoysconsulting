@@ -113,12 +113,12 @@ function FloatingDataElement({
             className={cn(
               "w-24 h-24 md:w-28 md:h-28",
               "rounded-xl",
-              "bg-white/[0.05] backdrop-blur-lg border border-white/[0.10]",
+              "bg-white/[0.08] backdrop-blur-lg border border-white/[0.15]",
               "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
               "flex items-center justify-center"
             )}
           >
-            <div className="w-8 h-8 border-2 border-cyan-400/20 rounded-lg" />
+            <div className="w-8 h-8 border-2 border-cyan-400/40 rounded-lg" />
           </div>
         );
     }
