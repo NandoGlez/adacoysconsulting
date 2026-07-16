@@ -52,16 +52,16 @@ function FloatingDataElement({
             className={cn(
               "w-36 h-36 md:w-40 md:h-40",
               "rounded-full",
-              "bg-white/[0.05] backdrop-blur-xl border border-white/[0.10]",
+              "bg-white/[0.08] backdrop-blur-xl border border-white/[0.15]",
               "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
               "flex flex-col items-center justify-center p-4"
             )}
           >
-            <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center mb-2">
+            <div className="w-8 h-8 rounded-full bg-cyan-500/30 flex items-center justify-center mb-2">
               <div className="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
             </div>
-            <div className="h-1 w-12 bg-white/10 rounded-full" />
-            <div className="h-1 w-8 bg-white/10 rounded-full mt-1" />
+            <div className="h-1 w-12 bg-white/15 rounded-full" />
+            <div className="h-1 w-8 bg-white/15 rounded-full mt-1" />
           </div>
         );
 
