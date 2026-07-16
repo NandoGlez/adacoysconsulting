@@ -306,13 +306,15 @@ const HeroSection = () => {
             >
               Comienza Tu Consultoría
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="glass-card text-white/80 hover:text-white hover:bg-white/[0.05] px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-xl transition-all duration-300 w-full sm:w-auto"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              asChild
             >
-              Habla Con Un Consultor
+              <a href="mailto:admin@adacoysconsulting.com">
+                Habla Con Un Consultor
+              </a>
             </Button>
           </motion.div>
         </div>
