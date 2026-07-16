@@ -89,20 +89,20 @@ function FloatingDataElement({
             className={cn(
               "w-56 h-32 md:w-60 md:h-36",
               "rounded-2xl",
-              "bg-white/[0.05] backdrop-blur-xl border border-white/[0.10]",
+              "bg-white/[0.08] backdrop-blur-xl border border-white/[0.15]",
               "shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]",
               "p-5"
             )}
           >
             <div className="flex justify-between items-center mb-4">
-              <div className="w-10 h-2 bg-white/20 rounded-full" />
-              <div className="w-4 h-4 rounded-full border border-cyan-400/50" />
+              <div className="w-10 h-2 bg-white/30 rounded-full" />
+              <div className="w-4 h-4 rounded-full border border-cyan-400/70" />
             </div>
             <div className="space-y-2">
-              <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
-                <div className="w-[75%] h-full bg-blue-500/60" />
+              <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <div className="w-[75%] h-full bg-blue-500/80" />
               </div>
-              <div className="w-[60%] h-1.5 bg-white/5 rounded-full" />
+              <div className="w-[60%] h-1.5 bg-white/10 rounded-full" />
             </div>
           </div>
         );
